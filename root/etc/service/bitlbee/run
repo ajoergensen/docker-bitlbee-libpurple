@@ -1,0 +1,3 @@
+#!/bin/bash
+chown -R app:app /var/lib/bitlbee
+exec /usr/sbin/bitlbee -F -n
