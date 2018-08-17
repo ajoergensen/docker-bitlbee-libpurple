@@ -3,11 +3,11 @@ ARG _builddep="libpurple-dev bitlbee-dev autoconf libjson-glib-dev libglib2.0-de
 
 RUN \
 	curl -s https://code.bitlbee.org/debian/release.key | apt-key add - && \
-	curl -s https://jgeboski.github.io/obs.key | apt-key add - && \
+	curl -s https://jgeboski.github.io/obs.key | apt-key add - && \ 
 	curl -s https://build.opensuse.org/projects/GNOME:Apps:pidgin-sipe/public_key  | apt-key add - && \
 	echo "deb http://code.bitlbee.org/debian/master/xenial/amd64/ ./" > /etc/apt/sources.list.d/bitlbee.list && \
-	echo "deb http://download.opensuse.org/repositories/home:/jgeboski/xUbuntu_16.04 ./" > /etc/apt/sources.list.d/jgeboski.list	
-	echo "deb https://download.opensuse.org/repositories/GNOME:/Apps:/pidgin-sipe/xUbuntu_16.04 ./" > /etc/apt/sources.list.d/pidgin-sipe.list
+	echo "deb http://download.opensuse.org/repositories/home:/jgeboski/xUbuntu_16.04 ./" > /etc/apt/sources.list.d/jgeboski.list && \
+	echo "deb https://download.opensuse.org/repositories/GNOME:/Apps:/pidgin-sipe/xUbuntu_16.04 ./" > /etc/apt/sources.list.d/pidgin-sipe.list && \
 	apt-get update && \
 	apt-get -y dist-upgrade && \
 	apt-get -y install bitlbee-libpurple bitlbee-plugin-otr bitlbee-facebook bitlbee-steam pidgin-sipe $_builddep && \
