@@ -22,7 +22,7 @@ RUN \
 	make && make install && \
 	cd /tmp && \
 	git clone https://github.com/dylex/slack-libpurple.git && cd slack-libpurple && \
-	make && make install &
+	make && make install && \
 	apt-get purge $_builddep && \
 	cleanup.sh
 
