@@ -1,5 +1,5 @@
 FROM ajoergensen/baseimage-ubuntu
-ARG _builddep="libpurple-dev bitlbee-dev autoconf libjson-glib-dev libglib2.0-dev libprotobuf-c-dev protobuf-c-compiler mercurial make libgcrypt20-dev libwebp-dev gettext build-essential git"
+ARG _builddep="libpurple-dev bitlbee-dev libprotobuf-c1 libwebp5 autoconf libjson-glib-dev libglib2.0-dev libprotobuf-c-dev protobuf-c-compiler mercurial make libgcrypt20-dev libwebp-dev gettext build-essential git"
 
 RUN \
 	curl -s https://code.bitlbee.org/debian/release.key | apt-key add - && \
